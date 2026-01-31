@@ -1,0 +1,181 @@
+:root {
+    --primary: #2563eb;
+    --dark: #0f172a;
+    --light: #f8fafc;
+    --muted: #64748b;
+    --glass: rgba(255, 255, 255, 0.85);
+    --input-bg: #1e293b;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- Navigation --- */
+.navbar {
+    padding: 20px 0;
+    transition: all 0.4s ease;
+    background: transparent;
+}
+
+.navbar.scrolled {
+    padding: 12px 0;
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: -1px;
+    font-size: 1.5rem;
+    color: var(--dark) !important;
+}
+
+.navbar-brand span { color: var(--primary); }
+
+.nav-link {
+    font-weight: 500;
+    color: var(--dark) !important;
+    margin-left: 25px;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary) !important;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background: radial-gradient(circle at top right, #e2e8f0, #ffffff);
+    padding-top: 100px;
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- Global Section Styles --- */
+.section-padding { padding: 100px 0; }
+.bg-light-alt { background-color: #f1f5f9; }
+.ls-2 { letter-spacing: 2px; }
+
+/* --- Feature Cards --- */
+.feature-card {
+    padding: 40px;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    transition: 0.3s;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    border-color: var(--primary);
+}
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+/* --- Buttons --- */
+.btn-primary-custom {
+    background: var(--dark);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-primary-custom:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-outline-custom {
+    border: 2px solid var(--dark);
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    color: var(--dark);
+    transition: 0.3s;
+}
+
+.btn-outline-custom:hover {
+    background: var(--dark);
+    color: white;
+}
+
+/* --- Contact Section (Dark Mode) --- */
+#contact {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.bg-secondary-dark {
+    background: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.icon-circle {
+    width: 45px;
+    height: 45px;
+    background: rgba(37, 99, 235, 0.1);
+    border: 1px solid var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+/* Fix: Form labels are now visible light gray */
+#contact .form-label {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+/* Fix: High contrast inputs */
+.custom-input {
+    background-color: #0f172a !important;
+    border: 1px solid #334155 !important;
+    color: #ffffff !important;
+    padding: 12px 15px !important;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.custom-input::placeholder {
+    color: #475569 !important;
+}
+
+.custom-input:focus {
+    background-color: #0f172a !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1) !important;
+    outline: none;
+}
